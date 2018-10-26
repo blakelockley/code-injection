@@ -1,70 +1,60 @@
 build/main.out:
 (__TEXT,__text) section
 _check_password:
-0000000100000db0	pushq	%rbp
-0000000100000db1	movq	%rsp, %rbp
-0000000100000db4	subq	$0xa0, %rsp
-0000000100000dbb	leaq	0x194(%rip), %rdi ## literal pool for: "Please enter the password: "
-0000000100000dc2	movq	0x247(%rip), %rax ## literal pool symbol address: ___stack_chk_guard
-0000000100000dc9	movq	(%rax), %rax
-0000000100000dcc	movq	%rax, -0x8(%rbp)
-0000000100000dd0	movb	$0x0, %al
-0000000100000dd2	callq	0x100000ef2 ## symbol stub for: _printf
-0000000100000dd7	leaq	-0x20(%rbp), %rdi
-0000000100000ddb	movl	%eax, -0x6c(%rbp)
-0000000100000dde	callq	0x100000eec ## symbol stub for: _gets
-0000000100000de3	leaq	-0x20(%rbp), %rdi
-0000000100000de7	leaq	_correct_password(%rip), %rsi
-0000000100000dee	movq	%rax, -0x78(%rbp)
-0000000100000df2	callq	0x100000ef8 ## symbol stub for: _strcmp
-0000000100000df7	cmpl	$0x0, %eax
-0000000100000dfa	jne	0x100000e6d
-0000000100000e00	leaq	0x16b(%rip), %rdi ## literal pool for: "Access granted, the codename is...\n"
-0000000100000e07	movb	$0x0, %al
-0000000100000e09	callq	0x100000ef2 ## symbol stub for: _printf
-0000000100000e0e	leaq	0x181(%rip), %rdi ## literal pool for: "flag.txt"
-0000000100000e15	leaq	0x183(%rip), %rsi ## literal pool for: "r"
-0000000100000e1c	movl	%eax, -0x7c(%rbp)
-0000000100000e1f	callq	0x100000ee6 ## symbol stub for: _fopen
-0000000100000e24	movl	$0x40, %esi
-0000000100000e29	leaq	-0x60(%rbp), %rdi
-0000000100000e2d	movq	%rax, -0x68(%rbp)
-0000000100000e31	movq	-0x68(%rbp), %rdx
-0000000100000e35	callq	0x100000ee0 ## symbol stub for: _fgets
-0000000100000e3a	leaq	0x160(%rip), %rdi ## literal pool for: "%s\n"
-0000000100000e41	leaq	-0x60(%rbp), %rsi
-0000000100000e45	movq	%rax, -0x88(%rbp)
-0000000100000e4c	movb	$0x0, %al
-0000000100000e4e	callq	0x100000ef2 ## symbol stub for: _printf
-0000000100000e53	movq	-0x68(%rbp), %rdi
-0000000100000e57	movl	%eax, -0x8c(%rbp)
-0000000100000e5d	callq	0x100000eda ## symbol stub for: _fclose
-0000000100000e62	movl	%eax, -0x90(%rbp)
-0000000100000e68	jmp	0x100000e81
-0000000100000e6d	leaq	0x131(%rip), %rdi ## literal pool for: "Access denied!\n"
-0000000100000e74	movb	$0x0, %al
-0000000100000e76	callq	0x100000ef2 ## symbol stub for: _printf
-0000000100000e7b	movl	%eax, -0x94(%rbp)
-0000000100000e81	movq	0x188(%rip), %rax ## literal pool symbol address: ___stack_chk_guard
-0000000100000e88	movq	(%rax), %rax
-0000000100000e8b	movq	-0x8(%rbp), %rcx
-0000000100000e8f	cmpq	%rcx, %rax
-0000000100000e92	jne	0x100000ea1
-0000000100000e98	addq	$0xa0, %rsp
-0000000100000e9f	popq	%rbp
-0000000100000ea0	retq
-0000000100000ea1	callq	0x100000ed4 ## symbol stub for: ___stack_chk_fail
-0000000100000ea6	ud2
-0000000100000ea8	nopl	(%rax,%rax)
+0000000100000df0	pushq	%rbp
+0000000100000df1	movq	%rsp, %rbp
+0000000100000df4	subq	$0x90, %rsp
+0000000100000dfb	leaq	0x152(%rip), %rdi ## literal pool for: "Please enter the password: "
+0000000100000e02	movb	$0x0, %al
+0000000100000e04	callq	0x100000efc ## symbol stub for: _printf
+0000000100000e09	leaq	-0x10(%rbp), %rdi
+0000000100000e0d	movl	%eax, -0x64(%rbp)
+0000000100000e10	callq	0x100000ef6 ## symbol stub for: _gets
+0000000100000e15	leaq	-0x10(%rbp), %rdi
+0000000100000e19	leaq	_correct_password(%rip), %rsi
+0000000100000e20	movq	%rax, -0x70(%rbp)
+0000000100000e24	callq	0x100000f02 ## symbol stub for: _strcmp
+0000000100000e29	cmpl	$0x0, %eax
+0000000100000e2c	jne	0x100000e9c
+0000000100000e32	leaq	0x137(%rip), %rdi ## literal pool for: "Access granted, the codename is...\n"
+0000000100000e39	movb	$0x0, %al
+0000000100000e3b	callq	0x100000efc ## symbol stub for: _printf
+0000000100000e40	leaq	0x14d(%rip), %rdi ## literal pool for: "flag.txt"
+0000000100000e47	leaq	0x14f(%rip), %rsi ## literal pool for: "r"
+0000000100000e4e	movl	%eax, -0x74(%rbp)
+0000000100000e51	callq	0x100000ef0 ## symbol stub for: _fopen
+0000000100000e56	movl	$0x40, %esi
+0000000100000e5b	leaq	-0x60(%rbp), %rdi
+0000000100000e5f	movq	%rax, -0x18(%rbp)
+0000000100000e63	movq	-0x18(%rbp), %rdx
+0000000100000e67	callq	0x100000eea ## symbol stub for: _fgets
+0000000100000e6c	leaq	0x12c(%rip), %rdi ## literal pool for: "%s\n"
+0000000100000e73	leaq	-0x60(%rbp), %rsi
+0000000100000e77	movq	%rax, -0x80(%rbp)
+0000000100000e7b	movb	$0x0, %al
+0000000100000e7d	callq	0x100000efc ## symbol stub for: _printf
+0000000100000e82	movq	-0x18(%rbp), %rdi
+0000000100000e86	movl	%eax, -0x84(%rbp)
+0000000100000e8c	callq	0x100000ee4 ## symbol stub for: _fclose
+0000000100000e91	movl	%eax, -0x88(%rbp)
+0000000100000e97	jmp	0x100000eb0
+0000000100000e9c	leaq	0x100(%rip), %rdi ## literal pool for: "Access denied!\n"
+0000000100000ea3	movb	$0x0, %al
+0000000100000ea5	callq	0x100000efc ## symbol stub for: _printf
+0000000100000eaa	movl	%eax, -0x8c(%rbp)
+0000000100000eb0	addq	$0x90, %rsp
+0000000100000eb7	popq	%rbp
+0000000100000eb8	retq
+0000000100000eb9	nopl	(%rax)
 _main:
-0000000100000eb0	pushq	%rbp
-0000000100000eb1	movq	%rsp, %rbp
-0000000100000eb4	subq	$0x10, %rsp
-0000000100000eb8	movl	$0x0, -0x4(%rbp)
-0000000100000ebf	movl	%edi, -0x8(%rbp)
-0000000100000ec2	movq	%rsi, -0x10(%rbp)
-0000000100000ec6	callq	_check_password
-0000000100000ecb	xorl	%eax, %eax
-0000000100000ecd	addq	$0x10, %rsp
-0000000100000ed1	popq	%rbp
-0000000100000ed2	retq
+0000000100000ec0	pushq	%rbp
+0000000100000ec1	movq	%rsp, %rbp
+0000000100000ec4	subq	$0x10, %rsp
+0000000100000ec8	movl	$0x0, -0x4(%rbp)
+0000000100000ecf	movl	%edi, -0x8(%rbp)
+0000000100000ed2	movq	%rsi, -0x10(%rbp)
+0000000100000ed6	callq	_check_password
+0000000100000edb	xorl	%eax, %eax
+0000000100000edd	addq	$0x10, %rsp
+0000000100000ee1	popq	%rbp
+0000000100000ee2	retq
